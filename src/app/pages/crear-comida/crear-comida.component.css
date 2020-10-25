@@ -1,0 +1,32 @@
+.sec{
+    width: 100%;
+}
+
+.entrada{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.entradas{
+    width: 45%;
+    
+
+}
+
+.entrada label{
+    font-size: 20px;
+    width: 100%;
+    text-align: start;
+}
+
+input{
+
+    margin-bottom: 40px;
+
+}
+input{
+
+    height: 56px;
+
+}
