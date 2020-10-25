@@ -3,3 +3,23 @@
     font-family: 'Open Sans', sans-serif;
     box-sizing: border-box;
 }
+
+
+  .header .navbar {
+    background-color: transparent !important;
+  }
+.footer {
+    margin-top: 225px;
+    border-top:1px solid #aaa;;
+    padding-top: 1px;   
+}
+
+#formLogin { 
+    margin: 0 auto; 
+    width:250px;
+    }
+
+#conForm { 
+        background-color: gainsboro;
+        }
+    
