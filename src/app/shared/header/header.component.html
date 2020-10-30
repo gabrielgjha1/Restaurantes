@@ -1,23 +1,28 @@
 
-<section class="head">
+<section class="head ">
 
-    <nav>
+    <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between ">
+        <a class="navbar-brand form-inline" href="#">
+            <img src="../../../assets/img/klipartz.com.png" width="60" height="60" alt="">
+        </a>
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse form-inline " id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li *ngFor="let item of menu "  class="nav-item active">
+              <a class="nav-link  text-white" [routerLink]="item.url" href="#">{{item.titulo}}<span class="sr-only">(current)</span></a>
+            </li>
 
-
-    <div class="icon">
-        <img src="../../../assets/img/klipartz.com.png" alt="">
-    </div>
-
-    <div>
-        <a href="">Agregar Comida</a>
-        <a href="">Comidas</a>
-        <a href="">Producto</a>
-        <a href="">Ubicacion</a>
-        <a href="">Login</a>
-    </div>
-
-
-    </nav>
+              <li class="nav-item">
+                <a  class="nav-link text-white" (click)="salir()">Salir</a>
+              </li>
+              <li class="nav-item">
+                <a  class="nav-link  text-white" [routerLink]="['/carrito']"><i class="fas fa-cart-arrow-down"></i></a>
+              </li>
+          </ul>
+        </div>
+      </nav>
     
     <section>
         <h1>Restaurante Practica UTP</h1>
@@ -26,3 +31,15 @@
 
 </section>
 
+
+<!-- <div class="icon">
+    <img src="../../../assets/img/klipartz.com.png" alt="">
+</div>
+
+<div>
+
+    <a *ngFor="let item of menu "  [routerLink]="item.url" >{{item.titulo}}</a>
+    <a (click)="salir()">Salir</a>
+    <a [routerLink]="['/carrito']"><i class="fas fa-cart-arrow-down"></i></a>
+  
+</div> -->

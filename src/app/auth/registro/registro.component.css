@@ -1,0 +1,45 @@
+
+.login{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.login img{
+
+    width: 40%;
+
+}
+
+.login div{
+    margin:auto;
+    width: 50%;
+    flex-wrap: wrap;
+    background: #f2f2f2 ;
+
+    padding: 15px;
+
+}
+
+section{
+
+    font-size: 20px;
+
+}
+
+input{
+    height: 45px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    
+    .login img{
+        width: 90%;
+    }
+    .login div{
+        width: 100%;
+    }
+  }

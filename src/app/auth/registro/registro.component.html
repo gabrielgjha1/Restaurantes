@@ -1,1 +1,71 @@
-<p>registro works!</p>
+<section>
+
+    <article *ngIf="!comprobarSesion">
+
+        <h2 class="text-center" >Registro</h2>
+        <hr>
+        <div class="login ">
+
+            <img src="../.././../assets/img/lunch_break.png" alt="">
+            <div class="shadow-dreamy">
+
+                    <p class="text-center">¿ Ya tienes cuenta  ? <span class="font-weight-bold"><a   [routerLink]="['/login']" class="font-weight-bold"  >Inicia Sesión</a></span>  </p>
+                    <hr>
+
+                    <form [formGroup]="FormularioReactivo" (ngSubmit)="GuardarRegistro()" >
+                        <label for="email">Ingresa tu email</label>
+                        <input type="email" formControlName="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Ingrese su email">
+                        <article *ngIf="email.invalid && (email.dirty || email.touched)" class="alert-danger mb-3  mt-0 p-2 " >
+                            <p class="Errores">Email es requerido</p>
+                        </article>
+                        <label for="nombre">Ingrese su nombre</label>
+                        <input type="text" formControlName="nombre" class="form-control" id="nombre" aria-describedby="emailHelp" placeholder="Ingrese su nombre">
+                        
+                        <article *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert-danger mb-3  mt-0 p-2 " >
+                            <p class="Errores">El nombre es requerido</p>
+                        </article>
+
+                        <label for="direccion">Ingrese su direccion</label>
+                        <input type="text" formControlName="direccion" class="form-control" id="direccion" aria-describedby="emailHelp" placeholder="Ingrese su direccion">
+                       
+                        <article *ngIf="direccion.invalid && (direccion.dirty || direccion.touched)" class="alert-danger mb-3  mt-0 p-2 " >
+                            <p class="Errores">La direccion es requerida</p>
+                        </article>
+                        
+                        <label for="usuario">Ingrese su usuario</label>
+                        <input type="text" formControlName="usuario" class="form-control" id="usuario" aria-describedby="emailHelp" placeholder="Ingrese su usuario">
+                        
+                        <article *ngIf="usuario.invalid && (usuario.dirty || usuario.touched)" class="alert-danger mb-3  mt-0 p-2 " >
+                            <p class="Errores">El usuario es requerido</p>
+                        </article>
+
+                        <label for="password">Contraseña</label>
+                        <input type="password" formControlName="password" class="form-control" id="password" placeholder="Ingresa contraseña">
+                        
+                        <article *ngIf="password.invalid && (password.dirty || password.touched)" class="alert-danger mb-3  mt-0 p-2 " >
+                            <p class="Errores">La contraseña es requerida</p>
+                        </article>
+
+                        <label for="password2">Contraseña</label>
+                        <input type="password" formControlName="password2" class="form-control" id="password2" placeholder="Repita su contraseña">
+                        
+                        <article *ngIf="email.invalid && (email.dirty || email.touched)" class="alert-danger mb-3  mt-0 p-2 " >
+                            <p class="Errores">Email es requerido</p>
+                        </article>
+
+                        <button type="submit" class="btn btn-danger btn-block" >Enviar</button>
+    
+                    </form>
+                   
+            </div>
+
+        </div>
+            
+
+    </article>
+
+    <article *ngIf="comprobarSesion">
+        <h2 class="text-center" >Ya estas registrado</h2>
+    </article>
+
+</section>

@@ -1,0 +1,67 @@
+section img{
+
+
+    width: 200px;
+    height: 200px;
+
+
+
+}
+
+section{
+
+    font-size: 20px;
+
+}
+
+tbody tr td{
+
+    height: 200px ;
+    padding-top: 100px;
+}
+
+.table{
+    border: solid 2px rgba(123,36,28,1);
+}
+.shadow-dreamy{
+    width: 50%;
+    /* border: solid 1px red; */
+
+}
+.precio{
+    width: 100%;
+    
+    
+    display:flex;
+    justify-content: flex-end;
+
+
+    
+}
+
+.Total{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+}
+
+.Total div {
+    width: 45%;
+    font-size: 16px ;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    
+    .precio{
+        justify-content: center;
+        width: 100%;
+    }
+    .Total div {
+
+        width: 100%;
+
+    }
+  }

@@ -7,11 +7,11 @@
     <img src="../../../assets/img/comida1.png" alt="">
    
     <div>
-        <h3 class="text-center mb-3">Comida 1</h3>
+        <h3 class="text-center mb-3 nombre">Comida 1</h3>
         <hr>
-        <p class="align-content-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rerum, amet illo ipsa corporis dolores magnam neque labore dignissimos repellendus sequi fugit quidem perferendis soluta maxime exercitationem, iste maiores aliquam.</p>
-        <p class="text-center">precio: <span class="font-weight-bold">  80$ </span> </p>
-        <button class="btn btn-danger btn-block" >Agregar al carrito</button>
+        <p class="align-content-center "> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rerum, amet illo ipsa corporis dolores magnam neque labore dignissimos repellendus sequi fugit quidem perferendis soluta maxime exercitationem, iste maiores aliquam.</p>
+        <p class="text-center ">precio:  <span class="font-weight-bold precio">80<span>$</span></span> </p>
+        <button (click)="Prueba($event,'xxsa2')" class="btn btn-danger btn-block" >Agregar al carrito</button>
     </div>
 
 </div>
@@ -21,11 +21,25 @@
     <img src="../../../assets/img/comida2.png" alt="">
    
     <div>
-        <h3 class="text-center mb-3">Comida 2</h3>
+        <h3 class="text-center mb-3 nombre">Comida 2</h3>
         <hr>
-        <p class="align-content-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rerum, amet illo ipsa corporis dolores magnam neque labore dignissimos repellendus sequi fugit quidem perferendis soluta maxime exercitationem, iste maiores aliquam.</p>
-        <p class="text-center">precio:  <span class="font-weight-bold">  80$  </span> </p>
-        <button class="btn btn-danger btn-block" >Agregar al carrito</button>
+        <p class="align-content-center "> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae rerum, amet illo ipsa corporis dolores magnam neque labore dignissimos repellendus sequi fugit quidem perferendis soluta maxime exercitationem, iste maiores aliquam.</p>
+        <p class="text-center ">precio:  <span class="font-weight-bold precio">80<span>$</span></span> </p>
+        <button (click)="Prueba($event,'xxsa')" class="btn btn-danger btn-block" >Agregar al carrito</button>
+    </div>
+
+</div>
+
+<div  *ngFor="let item of Comidas" class="contenido">
+
+    <img src="{{item.imagenUrl}}" alt="">
+   
+    <div>
+        <h3 class="text-center mb-3 nombre">{{item.nombre}}</h3>
+        <hr>
+        <p  class="align-content-center ">{{item.contenido}}</p>
+        <p class="text-center">precio:  <span class="font-weight-bold precio">  {{item.precio}} <span>$</span>   </span> </p>
+        <button (click)="Prueba($event,item.id)" class="btn btn-danger btn-block" >Agregar al carrito</button>
     </div>
 
 </div>

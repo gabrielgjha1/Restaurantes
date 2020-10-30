@@ -6,6 +6,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .entradas{
@@ -30,3 +31,11 @@ input{
     height: 56px;
 
 }
+
+@media screen and (max-width: 600px) {
+    
+    .entradas{
+        width: 90%;
+    }
+
+  }

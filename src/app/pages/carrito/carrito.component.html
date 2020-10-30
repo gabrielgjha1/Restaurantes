@@ -1,0 +1,57 @@
+<section>
+  <h2 class="text-center">Carrito de comidas</h2>
+  <hr>
+    <table class="table table-responsive-sm">
+        <thead class="btn-danger">
+          <tr>
+            <th class="text-center"  scope="col">Comida</th>
+            <th class="text-center"  scope="col">Nombre</th>
+            <th class="text-center"  scope="col">Cantidad</th>
+            <th class="text-center"  scope="col">Precio</th>
+            <th class="text-center"  scope="col">Editar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of carrito"  >
+            <th class="text-center"><img src="{{item.imagen}}" alt=""></th>
+            <td class="text-center">{{item.nombre}}</td>
+            <td class="text-center">{{item.cantidad}}</td>
+            <td class="text-center">{{item.precio}} <span>$</span> </td>
+            <td class="text-center">
+
+        
+              <a (click)="EliminarElemento(item.id)"><i class="fas fa-backspace"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <article class="precio">
+
+        <div class="shadow-dreamy ">
+          <h3 class="text-center" >Total</h3>
+          <hr>
+          <div class="Total" >
+            
+            <div >
+
+              <p class="" >SubTotal:</p>
+              <p class="" >Total Sin Impuesto:</p>
+              <p class="" >Total Incluyendo Impuestos:</p>
+            </div>
+
+            <div>
+
+              <p>{{this.Itmbs}}$</p>
+              <p>{{this.PrecioTotal}}$</p>
+              <p>{{this.Itmbs}}$</p>
+
+            </div>
+            
+          </div>
+          <button (click)="GuardarElemento()" class="btn btn-danger btn-block "  >Comprar</button>
+        </div>
+
+      </article>
+
+</section>

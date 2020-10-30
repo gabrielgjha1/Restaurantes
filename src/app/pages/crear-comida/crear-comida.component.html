@@ -3,46 +3,56 @@
     
     <h2>Guardar Comida</h2>
     <hr>
+    <form [formGroup]="formReactive" (ngSubmit)="EnviarDatos()">
         <section class="entrada"  >
+         
 
+           
             <article class="entradas">
-                <form action="">
+               
 
                     <div>
 
                         <label for="nombre" class="" >Nombre</label>
-                        <input type="text" class="form-control" id="nombre" placeholder="Ingrese nombre de la comida">
+                        <input type="text" formControlName="nombre" class="form-control" id="nombre" placeholder="Ingrese nombre de la comida">
                     
                     </div>
-
+                    <article *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)" class="alert-danger mb-3  mt-0 p-2 " >
+                        <p class="Errores">Nombre es requerido</p>
+                    </article>
                     <div>
 
                         <label for="precio" class="" >Precio</label>
-                        <input type="number" class="form-control" id="number" placeholder="Ingrese nombre de la comida">
-                    
+                        <input type="number" formControlName="precio" class="form-control" id="precio" placeholder="Ingrese nombre de la comida">
+                        <article *ngIf="precio.invalid && (precio.dirty || precio.touched)" class="alert-danger mb-3  mt-0 p-2 " >
+                            <p class="Errores">Precio es requerido</p>
+                        </article>
                     </div>
 
                     <div>
 
                         <label for="imagen" class="" >Ingrese imagen</label>
-                        <input type="file" class="form-control" id="imagen" placeholder="Ingrese imagen">
+                        <input type="file" (change)="cambiarImagen($event.target.files[0])" class="form-control" id="imagen" placeholder="Ingrese imagen">
                         
                     </div>
 
 
                     
-                </form>
+              
             </article>
 
             <article class="entradas ">
 
                 <label for="contenido">Conetenido</label>
-                <textarea class="form-control" id="contenido" rows="3"></textarea>
-
+                <textarea formControlName="contenido" class="form-control" id="contenido" rows="3"></textarea>
+                <article *ngIf="contenido.invalid && (contenido.dirty || contenido.touched)" class="alert-danger mb-3  mt-0 p-2 " >
+                    <p class="Errores">Contenido es requerido es requerido</p>
+                </article>
             </article>
+     
         </section>
-        <button class="btn btn-danger btn-block" >Enviar</button>
-
+        <button type="submit" class="btn btn-danger btn-block" >Enviar</button>
+    </form>
 
 
 </section>

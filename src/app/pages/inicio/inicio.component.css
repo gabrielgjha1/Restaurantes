@@ -2,6 +2,7 @@ section .contenido {
 
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center; 
     margin-bottom: 25px;
 
@@ -37,3 +38,14 @@ section .contenido div {
 .precio {
     font-size: 25px;
 }
+
+@media screen and (max-width: 600px) {
+    section  .contenido img{
+        width: 100%;
+    }
+    section .contenido div{
+        margin-top: 15px;
+        width: 90%;
+    }
+
+  }

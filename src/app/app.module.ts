@@ -7,6 +7,11 @@ import { PagesModule } from './pages/pages.module';
 import { LoginComponent } from './auth/login/login.component';
 import { RegistroComponent } from './auth/registro/registro.component';
 import { SharedModule } from './shared/shared.module';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
+
 
 
 @NgModule({
@@ -14,6 +19,7 @@ import { SharedModule } from './shared/shared.module';
     AppComponent,
     LoginComponent,
     RegistroComponent,
+ 
 
 
   ],
@@ -21,7 +27,11 @@ import { SharedModule } from './shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
-    SharedModule
+    SharedModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
