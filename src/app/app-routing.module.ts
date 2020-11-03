@@ -8,6 +8,7 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { AdminROleGuard } from './guards/admin-role.guard';
+import { MisPedidosComponent } from './pages/mis-pedidos/mis-pedidos.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
 {path:'registro',component:RegistroComponent},
 {path:'carrito',component:CarritoComponent},
 {path:'pedidos',component:PedidosComponent,canActivate:[AdminROleGuard]},
-{path:'usuarios',component:UsuariosComponent,canActivate:[AdminROleGuard]}
+{path:'usuarios',component:UsuariosComponent,canActivate:[AdminROleGuard]},
+{path:'misPedidos',component:MisPedidosComponent}
 
 
 ];

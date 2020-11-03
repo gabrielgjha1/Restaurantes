@@ -1,5 +1,6 @@
 
 export class Usuario{
+    _id: any;
 
     constructor(
 

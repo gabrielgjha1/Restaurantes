@@ -1,0 +1,31 @@
+
+<h2 class="text-center" >Estado del pedido</h2>
+<hr>    
+<div *ngFor="let item of pedido" class="pedidos">
+    <h5 class="text-center" >Pedido 1</h5>
+    <p class="text-center">{{item.pedido}}</p>
+    <div class="numeros">
+
+        <div class="estado">
+            <span>1</span>
+            <p> Pendiente </p>
+        </div>
+
+        <div class="estado">
+            <span>2</span>
+            <p>Enviado</p>
+        </div>
+
+        <div class="estado">
+            <span>3</span>
+            <p>Entregado</p>
+        </div>
+    
+    </div>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped bg-danger progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: {{item.enviado | pedidoUSUARIO}}%"></div>
+      </div>
+</div>
+
+
+

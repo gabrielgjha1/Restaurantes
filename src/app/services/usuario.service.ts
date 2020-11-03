@@ -18,6 +18,7 @@ export class UsuarioService {
   public rol:string;
   constructor(public http:HttpClient,private route:Router) { 
     this.ComprobarLogin();
+    this.AsignarDatos();
   }
 
   
@@ -79,8 +80,29 @@ export class UsuarioService {
   GuardarDatos(usuario:Usuario,token:string){
     this.token=token;
     this.Usuario=usuario;
+    this.rol=usuario.rol;
     localStorage.setItem('token',token);
+    localStorage.setItem('rol',usuario.rol);
     localStorage.setItem('usuario', JSON.stringify(usuario))
+
+  }
+
+  AsignarDatos(){
+    
+    if (!localStorage.getItem('token')){
+
+      return;
+
+    }else{
+
+     this.token = localStorage.getItem('token');
+     this.Usuario = JSON.parse(localStorage.getItem('usuario')); 
+     this.rol =  localStorage.getItem('rol');
+
+
+    }
+
+  
 
   }
 
@@ -116,7 +138,7 @@ export class UsuarioService {
        this.rol=resp.usuario.rol;
        console.log(this.rol)
        this.GuardarDatos(resp.usuario,resp.token)
-
+       location.reload();
         // this.route.navigateByUrl('');
 
       }),

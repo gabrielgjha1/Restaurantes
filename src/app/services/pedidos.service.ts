@@ -55,6 +55,33 @@ export class PedidosService {
 
   }
 
+
+  transformarDatosUsuario(Pedido:any[]):Pedidos[]{
+
+    return  Pedido.map((resp)=>{
+      
+    return  new Pedidos(resp.pedido,resp.precio,resp.cantidad,undefined,resp.enviado);
+
+    })
+
+  } 
+
+  TraerPedidosUsuario(id:string){
+
+    const url = environment.urlBackend+'compras/usuario/'+id;
+
+    return this.http.get(url).pipe(
+
+      map((resp:any)=>{
+    
+        return this.transformarDatosUsuario(resp.compra)})
+
+    )
+
+
+
+  }
+
   public ActualizarPedido(id:string){
 
     const url = environment.urlBackend+'compras/'+id;

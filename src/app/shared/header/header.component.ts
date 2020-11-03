@@ -30,9 +30,11 @@ export class HeaderComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         localStorage.removeItem('token');
+        localStorage.removeItem('usuario');
+        
       }
+      location.reload();
       
-      this.router.navigateByUrl('login')
 
     })
 

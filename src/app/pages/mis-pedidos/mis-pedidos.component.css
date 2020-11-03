@@ -1,0 +1,49 @@
+.pedidos{
+
+    width: 100%;
+    margin-bottom: 25px;
+}
+.numeros{
+
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.estado{
+    display: flex;
+    flex-direction: column;
+}
+
+.estado span{
+
+    background: #78281F;
+    border-radius: 50%;
+    width: 60px;
+    width: 60px;
+    padding: 3px;
+    color: white;
+    text-align: center;
+
+}
+
+.estado  p {
+
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 600px) {
+    
+    .numeros{
+
+        width: 100%;
+
+    }
+    
+
+  } 

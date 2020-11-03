@@ -15,9 +15,9 @@ export class NavarService {
 
   Traermenu(){
 
-
-
-    if (this.usuarioservice.Usuario.rol==='ADMIN_ROLE'){
+    console.log('hola')
+    console.log(this.usuarioservice.rol)
+    if (this.usuarioservice.rol==='ADMIN_ROLE'){
 
       this.menu  = [
   
@@ -25,7 +25,8 @@ export class NavarService {
         {  titulo: 'Agregar Comida',url:'/comida'},
         {  titulo: 'login',url:'/login'},
         {  titulo: 'Pedidos',url:'/pedidos'},
-        {  titulo: 'Usuarios',url:'/usuarios'}
+        {  titulo: 'Usuarios',url:'/usuarios'},
+        {  titulo: 'Mis Pedidos',url:'/misPedidos'},
   
       ];
 
@@ -35,6 +36,7 @@ export class NavarService {
   
         {  titulo: 'Comidas',url:''},
         {  titulo: 'login',url:'/login'},
+        {  titulo: 'Mis Pedidos',url:'/misPedidos'},
   
       ];
 

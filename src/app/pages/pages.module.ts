@@ -8,10 +8,12 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { CarritoComponent } from './carrito/carrito.component';
 import { PedidosComponent } from './pedidos/pedidos.component';
 import { EnvioPipe } from '../pipes/envio.pipe';
+import { PedidoUSUARIOPipe } from '../pipes/pedido-usuario.pipe';
 import { UsuariosComponent } from './usuarios/usuarios.component';
+import { MisPedidosComponent } from './mis-pedidos/mis-pedidos.component';
 
 @NgModule({
-  declarations: [InicioComponent, CrearComidaComponent, CarritoComponent, PedidosComponent,EnvioPipe, UsuariosComponent],
+  declarations: [InicioComponent, CrearComidaComponent, CarritoComponent, PedidosComponent,EnvioPipe, UsuariosComponent, MisPedidosComponent,PedidoUSUARIOPipe],
   exports:[InicioComponent, CrearComidaComponent],
   imports: [
     CommonModule,
